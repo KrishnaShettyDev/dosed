@@ -174,19 +174,32 @@ body {
 /* Agents Scroll */
 .info-col-full {
   grid-column: 1 / -1;
+  overflow: hidden;
+}
+
+.agents-scroll-wrapper {
+  overflow: hidden;
+  position: relative;
 }
 
 .agents-scroll {
   display: flex;
-  gap: 12px;
-  overflow-x: auto;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-  padding: 8px 0;
+  gap: 24px;
+  animation: scroll-loop 20s linear infinite;
+  width: max-content;
 }
 
-.agents-scroll::-webkit-scrollbar {
-  display: none;
+.agents-scroll:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scroll-loop {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 .agent-logo {
