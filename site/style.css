@@ -204,32 +204,26 @@ body {
 
 .agent-logo {
   flex-shrink: 0;
-  filter: grayscale(100%);
-  opacity: 0.6;
+  text-decoration: none;
   transition: all 0.3s ease;
 }
 
-.agent-logo:hover {
-  filter: grayscale(0%);
-  opacity: 1;
+.agent-badge {
+  background: var(--gray-900);
+  border: 1px solid var(--gray-800);
+  border-radius: 8px;
+  padding: 12px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--gray-500);
+  white-space: nowrap;
+  transition: all 0.3s ease;
 }
 
-.agent-logo img {
-  height: 48px;
-  width: auto;
-  object-fit: contain;
-}
-
-@media (min-width: 768px) {
-  .agent-logo img {
-    height: 56px;
-  }
-}
-
-@media (min-width: 1024px) {
-  .agent-logo img {
-    height: 64px;
-  }
+.agent-logo:hover .agent-badge {
+  color: var(--fg);
+  border-color: var(--gray-600);
+  background: var(--gray-800);
 }
 
 /* Leaderboard */
