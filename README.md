@@ -1,5 +1,7 @@
 # DOSED
 
+**[get-dosed.vercel.app](https://get-dosed.vercel.app)**
+
 Cognitive tools for developers and creatives. Not just altered states - **task-matched mental modes**.
 
 Like [skills.sh](https://skills.sh) but for altered consciousness. The AI doesn't learn to do something new - it *thinks differently*.
@@ -20,19 +22,19 @@ Different work needs different minds:
 
 ```bash
 # Install the meta-recommender
-npx skills add yourusername/dosed --skill dosed
+npx skills add KrishnaShettyDev/dosed --skill dosed
 
 # Install workflow tools
-npx skills add yourusername/dosed --skill brainstorm
-npx skills add yourusername/dosed --skill code-review
-npx skills add yourusername/dosed --skill debug
-npx skills add yourusername/dosed --skill write
-npx skills add yourusername/dosed --skill design
-npx skills add yourusername/dosed --skill feedback
+npx skills add KrishnaShettyDev/dosed --skill brainstorm
+npx skills add KrishnaShettyDev/dosed --skill code-review
+npx skills add KrishnaShettyDev/dosed --skill debug
+npx skills add KrishnaShettyDev/dosed --skill write
+npx skills add KrishnaShettyDev/dosed --skill design
+npx skills add KrishnaShettyDev/dosed --skill feedback
 
 # Install raw substances for custom use
-npx skills add yourusername/dosed --skill lsd
-npx skills add yourusername/dosed --skill mdma
+npx skills add KrishnaShettyDev/dosed --skill lsd
+npx skills add KrishnaShettyDev/dosed --skill mdma
 # etc.
 ```
 
