@@ -120,11 +120,18 @@ body {
 /* Info Row - Two Column */
 .info-row {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 48px;
+  grid-template-columns: 1fr;
+  gap: 32px;
   margin-bottom: 64px;
   padding-bottom: 48px;
   border-bottom: 1px solid var(--gray-800);
+}
+
+@media (min-width: 768px) {
+  .info-row {
+    grid-template-columns: auto 1fr;
+    gap: 48px;
+  }
 }
 
 .info-label {
@@ -164,24 +171,52 @@ body {
   flex-shrink: 0;
 }
 
-/* Agents */
-.agents {
-  display: flex;
-  gap: 20px;
+/* Agents Scroll */
+.info-col-full {
+  grid-column: 1 / -1;
 }
 
-.agent {
-  width: 36px;
-  height: 36px;
+.agents-scroll {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--gray-400);
+  gap: 12px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding: 8px 0;
 }
 
-.agent svg {
-  width: 24px;
-  height: 24px;
+.agents-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.agent-logo {
+  flex-shrink: 0;
+  filter: grayscale(100%);
+  opacity: 0.6;
+  transition: all 0.3s ease;
+}
+
+.agent-logo:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+}
+
+.agent-logo img {
+  height: 48px;
+  width: auto;
+  object-fit: contain;
+}
+
+@media (min-width: 768px) {
+  .agent-logo img {
+    height: 56px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .agent-logo img {
+    height: 64px;
+  }
 }
 
 /* Leaderboard */
