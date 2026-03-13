@@ -1,0 +1,25 @@
+{
+  "name": "dosed",
+  "version": "1.0.0",
+  "description": "Cognitive tools for AI agents. Task-matched mental modes based on phenomenological research.",
+  "bin": {
+    "dosed": "./bin/dosed.js"
+  },
+  "keywords": [
+    "ai",
+    "agents",
+    "claude",
+    "cursor",
+    "copilot",
+    "skills",
+    "cognitive",
+    "llm"
+  ],
+  "author": "KrishnaShettyDev",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KrishnaShettyDev/dosed"
+  },
+  "homepage": "https://get-dosed.vercel.app"
+}

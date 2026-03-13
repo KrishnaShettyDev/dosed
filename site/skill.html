@@ -185,7 +185,7 @@
       <p class="install-label">INSTALL</p>
       <div class="install-box" onclick="copyInstall()">
         <span class="install-prompt">$</span>
-        <code class="install-cmd" id="install-cmd">npx skills add KrishnaShettyDev/dosed</code>
+        <code class="install-cmd" id="install-cmd">npx dosed</code>
         <svg class="install-copy" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <rect width="14" height="14" x="8" y="8" rx="2"/>
           <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/>
@@ -455,7 +455,7 @@
       document.getElementById('skill-title').textContent = skill.name;
       document.getElementById('skill-desc').textContent = skill.desc;
       document.getElementById('skill-type').textContent = skill.type;
-      document.getElementById('install-cmd').textContent = `npx skills add KrishnaShettyDev/dosed --skill ${skill.name}`;
+      document.getElementById('install-cmd').textContent = `npx dosed add ${skill.name}`;
       document.getElementById('skill-content').innerHTML = skill.content;
     } else {
       document.getElementById('skill-title').textContent = 'Skill not found';

@@ -28,7 +28,7 @@ const skills = {
 
 // Copy install command
 function copyCmd() {
-  navigator.clipboard.writeText('npx skills add KrishnaShettyDev/dosed');
+  navigator.clipboard.writeText('npx dosed');
   showToast();
 }
 
