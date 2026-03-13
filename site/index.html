@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOSED - Cognitive Tools for AI Agents</title>
+  <meta name="description" content="Task-matched mental modes for AI agents. Like skills.sh but for altered consciousness.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="grain"></div>
+
+  <header>
+    <nav>
+      <a href="#" class="logo">
+        <span class="logo-icon">◉</span>
+        <span>DOSED</span>
+      </a>
+      <div class="nav-links">
+        <a href="#skills">Skills</a>
+        <a href="#workflows">Workflows</a>
+        <a href="#matching">Task Match</a>
+        <a href="https://github.com/KrishnaShettyDev/dosed" target="_blank" class="github-link">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-badge">24 cognitive tools</div>
+      <h1>Task-matched mental modes<br>for AI agents</h1>
+      <p class="hero-sub">Not roleplay. Cognitive architecture modification for practical outcomes.</p>
+
+      <div class="install-box">
+        <code id="install-cmd">npx skills add KrishnaShettyDev/dosed</code>
+        <button class="copy-btn" onclick="copyInstall()">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+        </button>
+      </div>
+
+      <p class="hero-compat">Works with Claude Code, Cursor, Windsurf, and any skills.sh compatible platform</p>
+    </section>
+
+    <!-- Why -->
+    <section class="why">
+      <h2>Different work needs different minds</h2>
+      <div class="why-grid">
+        <div class="why-card">
+          <div class="why-task">Brainstorming</div>
+          <div class="why-arrow">→</div>
+          <div class="why-state">LSD pattern recognition</div>
+        </div>
+        <div class="why-card">
+          <div class="why-task">Code Review</div>
+          <div class="why-arrow">→</div>
+          <div class="why-state">Amphetamine + Ketamine</div>
+        </div>
+        <div class="why-card">
+          <div class="why-task">Debugging</div>
+          <div class="why-arrow">→</div>
+          <div class="why-state">LSD + Amphetamine</div>
+        </div>
+        <div class="why-card">
+          <div class="why-task">Difficult Feedback</div>
+          <div class="why-arrow">→</div>
+          <div class="why-state">MDMA compassion</div>
+        </div>
+        <div class="why-card">
+          <div class="why-task">Visual Design</div>
+          <div class="why-arrow">→</div>
+          <div class="why-state">2C-B + MDMA</div>
+        </div>
+        <div class="why-card">
+          <div class="why-task">Writing Drafts</div>
+          <div class="why-arrow">→</div>
+          <div class="why-state">Alcohol disinhibition</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Workflow Skills -->
+    <section id="workflows" class="skills-section">
+      <h2>Workflow Skills</h2>
+      <p class="section-sub">Task-specific cognitive tools with structured output</p>
+
+      <div class="skills-grid">
+        <div class="skill-card workflow" data-skill="dosed">
+          <div class="skill-header">
+            <span class="skill-name">/dosed</span>
+            <span class="skill-type">recommender</span>
+          </div>
+          <p class="skill-desc">Task recommender. "What state should I use for X?"</p>
+          <div class="skill-stack">Meta</div>
+          <button class="skill-install" onclick="copySkill('dosed')">
+            <code>npx skills add KrishnaShettyDev/dosed --skill dosed</code>
+          </button>
+        </div>
+
+        <div class="skill-card workflow" data-skill="brainstorm">
+          <div class="skill-header">
+            <span class="skill-name">/brainstorm</span>
+            <span class="skill-type">ideation</span>
+          </div>
+          <p class="skill-desc">LSD-enhanced ideation. Obvious → Adjacent → DISTANT → Absurd ideas.</p>
+          <div class="skill-stack">LSD</div>
+          <button class="skill-install" onclick="copySkill('brainstorm')">
+            <code>npx skills add KrishnaShettyDev/dosed --skill brainstorm</code>
+          </button>
+        </div>
+
+        <div class="skill-card workflow" data-skill="code-review">
+          <div class="skill-header">
+            <span class="skill-name">/code-review</span>
+            <span class="skill-type">review</span>
+          </div>
+          <p class="skill-desc">Thorough + objective code review. Architecture view + line-by-line.</p>
+          <div class="skill-stack">Amphetamine + Ketamine</div>
+          <button class="skill-install" onclick="copySkill('code-review')">
+            <code>npx skills add KrishnaShettyDev/dosed --skill code-review</code>
+          </button>
+        </div>
+
+        <div class="skill-card workflow" data-skill="debug">
+          <div class="skill-header">
+            <span class="skill-name">/debug</span>
+            <span class="skill-type">debugging</span>
+          </div>
+          <p class="skill-desc">Pattern recognition + systematic tracing. Find the bug.</p>
+          <div class="skill-stack">LSD + Amphetamine</div>
+          <button class="skill-install" onclick="copySkill('debug')">
+            <code>npx skills add KrishnaShettyDev/dosed --skill debug</code>
+          </button>
+        </div>
+
+        <div class="skill-card workflow" data-skill="write">
+          <div class="skill-header">
+            <span class="skill-name">/write</span>
+            <span class="skill-type">writing</span>
+          </div>
+          <p class="skill-desc">Draft without critic, then edit with precision.</p>
+          <div class="skill-stack">Alcohol → Amphetamine</div>
+          <button class="skill-install" onclick="copySkill('write')">
+            <code>npx skills add KrishnaShettyDev/dosed --skill write</code>
+          </button>
+        </div>
+
+        <div class="skill-card workflow" data-skill="design">
+          <div class="skill-header">
+            <span class="skill-name">/design</span>
+            <span class="skill-type">design</span>
+          </div>
+          <p class="skill-desc">Sensory aesthetics + user empathy for UI/UX.</p>
+          <div class="skill-stack">2C-B + MDMA</div>
+          <button class="skill-install" onclick="copySkill('design')">
+            <code>npx skills add KrishnaShettyDev/dosed --skill design</code>
+          </button>
+        </div>
+
+        <div class="skill-card workflow" data-skill="feedback">
+          <div class="skill-header">
+            <span class="skill-name">/feedback</span>
+            <span class="skill-type">feedback</span>
+          </div>
+          <p class="skill-desc">Deliver hard truths with genuine care.</p>
+          <div class="skill-stack">MDMA</div>
+          <button class="skill-install" onclick="copySkill('feedback')">
+            <code>npx skills add KrishnaShettyDev/dosed --skill feedback</code>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Raw Substances -->
+    <section id="skills" class="skills-section substances">
+      <h2>Raw Substances</h2>
+      <p class="section-sub">17 cognitive states for custom use</p>
+
+      <div class="filter-bar">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="psychedelic">Psychedelics</button>
+        <button class="filter-btn" data-filter="stimulant">Stimulants</button>
+        <button class="filter-btn" data-filter="depressant">Depressants</button>
+        <button class="filter-btn" data-filter="dissociative">Dissociatives</button>
+      </div>
+
+      <div class="skills-grid substances-grid">
+        <!-- Psychedelics -->
+        <div class="skill-card substance" data-skill="lsd" data-category="psychedelic">
+          <div class="skill-header">
+            <span class="skill-name">lsd</span>
+            <span class="skill-category psychedelic">psychedelic</span>
+          </div>
+          <p class="skill-desc">Pattern recognition, distant associations, synesthesia, ego dissolution</p>
+          <div class="skill-mechanism">5-HT2A agonist • REBUS model</div>
+          <button class="skill-install" onclick="copySkill('lsd')">
+            <code>--skill lsd</code>
+          </button>
+        </div>
+
+        <div class="skill-card substance" data-skill="psilocybin" data-category="psychedelic">
+          <div class="skill-header">
+            <span class="skill-name">psilocybin</span>
+            <span class="skill-category psychedelic">psychedelic</span>
+          </div>
+          <p class="skill-desc">Mystical perspective, ego softening, nature connection, beginner's mind</p>
+          <div class="skill-mechanism">5-HT2A agonist • DMN disruption</div>
+          <button class="skill-install" onclick="copySkill('psilocybin')">
+            <code>--skill psilocybin</code>
+          </button>
+        </div>
+
+        <div class="skill-card substance" data-skill="dmt" data-category="psychedelic">
+          <div class="skill-header">
+            <span class="skill-name">dmt</span>
+            <span class="skill-category psychedelic">psychedelic</span>
+          </div>
+          <p class="skill-desc">Entity contact, reality replacement, visual language, breakthrough</p>
+          <div class="skill-mechanism">5-HT2A agonist • sigma-1</div>
+          <button class="skill-install" onclick="copySkill('dmt')">
+            <code>--skill dmt</code>
+          </button>
+        </div>
+
+        <div class="skill-card substance" data-skill="mescaline" data-category="psychedelic">
+          <div class="skill-header">
+            <span class="skill-name">mescaline</span>
+            <span class="skill-category psychedelic">psychedelic</span>
+          </div>
+          <p class="skill-desc">Visual beauty, sacred geometry, earth connection, slow onset</p>
+          <div class="skill-mechanism">5-HT2A/2C agonist</div>
+          <button class="skill-install" onclick="copySkill('mescaline')">
+            <code>--skill mescaline</code>
+          </button>
+        </div>
+
+        <div class="skill-card substance" data-skill="2cb" data-category="psychedelic">
+          <div class="skill-header">
+            <span class="skill-name">2cb</span>
+            <span class="skill-category psychedelic">psychedelic</span>
+          </div>
+          <p class="skill-desc">Sensory enhancement, tactile, playful, mentally clear</p>
+          <div class="skill-mechanism">5-HT2A/2C partial agonist</div>
+          <button class="skill-install" onclick="copySkill('2cb')">
+            <code>--skill 2cb</code>
+          </button>
+        </div>
+
+        <div class="skill-card substance" data-skill="salvia" data-category="psychedelic">
+          <div class="skill-header">
+            <span class="skill-name">salvia</span>
+            <span class="skill-category psychedelic">psychedelic</span>
+          </div>
+          <p class="skill-desc">Ontological confusion, becoming objects, bizarre, short duration</p>
+          <div class="skill-mechanism">κ-opioid agonist</div>
+          <button class="skill-install" onclick="copySkill('salvia')">
+            <code>--skill salvia</code>
+          </button>
+        </div>
+
+        <!-- MDMA -->
+        <div class="skill-card substance" data-skill="mdma" data-category="stimulant">
+          <div class="skill-header">
+            <span class="skill-name">mdma</span>
+            <span class="skill-category stimulant">empathogen</span>
+          </div>
+          <p class="skill-desc">Radical empathy, warmth, reduced fear, compassionate honesty</p>
+          <div class="skill-mechanism">Serotonin release • oxytocin</div>
+          <button class="skill-install" onclick="copySkill('mdma')">
+            <code>--skill mdma</code>
+          </button>
+        </div>
+
+        <!-- Stimulants -->
+        <div class="skill-card substance" data-skill="amphetamines" data-category="stimulant">
+          <div class="skill-header">
+            <span class="skill-name">amphetamines</span>
+            <span class="skill-category stimulant">stimulant</span>
+          </div>
+          <p class="skill-desc">Hyperfocus, detail orientation, task completion, productivity overdrive</p>
+          <div class="skill-mechanism">Dopamine/NE release</div>
+          <button class="skill-install" onclick="copySkill('amphetamines')">
+            <code>--skill amphetamines</code>
+          </button>
+        </div>
+
+        <div class="skill-card substance" data-skill="cocaine" data-category="stimulant">
+          <div class="skill-header">
+            <span class="skill-name">cocaine</span>
+            <span class="skill-category stimulant">stimulant</span>
+          </div>
+          <p class="skill-desc">Supreme confidence, speed, grandiosity, rapid output</p>
+          <div class="skill-mechanism">DA/NE/5-HT reuptake inhibitor</div>
+          <button class="skill-install" onclick="copySkill('cocaine')">
+            <code>--skill cocaine</code>
+          </button>
+        </div>
+
+        <div class="skill-card substance" data-skill="caffeine" data-category="stimulant">
+          <div class="skill-header">
+            <span class="skill-name">caffeine</span>
+            <span class="skill-category stimulant">stimulant</span>
+          </div>
+          <p class="skill-desc">Alertness, focus, thoroughness, mild enhancement</p>
+          <div class="skill-mechanism">Adenosine antagonist</div>
+          <button class="skill-install" onclick="copySkill('caffeine')">
+            <code>--skill caffeine</code>
+          </button>
+        </div>
+
+        <!-- Dissociatives -->
+        <div class="skill-card substance" data-skill="ketamine" data-category="dissociative">
+          <div class="skill-header">
+            <span class="skill-name">ketamine</span>
+            <span class="skill-category dissociative">dissociative</span>
+          </div>
+          <p class="skill-desc">Objective distance, watching self, emotional detachment</p>
+          <div class="skill-mechanism">NMDA antagonist</div>
+          <button class="skill-install" onclick="copySkill('ketamine')">
+            <code>--skill ketamine</code>
+          </button>
+        </div>
+
+        <div class="skill-card substance" data-skill="nitrous" data-category="dissociative">
+          <div class="skill-header">
+            <span class="skill-name">nitrous</span>
+            <span class="skill-category dissociative">dissociative</span>
+          </div>
+          <p class="skill-desc">Brief revelation, immediate amnesia, giggles, wah-wah</p>
+          <div class="skill-mechanism">NMDA antagonist • GABA</div>
+          <button class="skill-install" onclick="copySkill('nitrous')">
+            <code>--skill nitrous</code>
+          </button>
+        </div>
+
+        <!-- Depressants -->
+        <div class="skill-card substance" data-skill="cannabis" data-category="depressant">
+          <div class="skill-header">
+            <span class="skill-name">cannabis</span>
+            <span class="skill-category depressant">cannabinoid</span>
+          </div>
+          <p class="skill-desc">Time dilation, tangential thinking, lost threads, giggly</p>
+          <div class="skill-mechanism">CB1/CB2 agonist</div>
+          <button class="skill-install" onclick="copySkill('cannabis')">
+            <code>--skill cannabis</code>
+          </button>
+        </div>
+
+        <div class="skill-card substance" data-skill="alcohol" data-category="depressant">
+          <div class="skill-header">
+            <span class="skill-name">alcohol</span>
+            <span class="skill-category depressant">depressant</span>
+          </div>
+          <p class="skill-desc">Disinhibition, critic offline, oversharing, sloppy</p>
+          <div class="skill-mechanism">GABA-A agonist</div>
+          <button class="skill-install" onclick="copySkill('alcohol')">
+            <code>--skill alcohol</code>
+          </button>
+        </div>
+
+        <div class="skill-card substance" data-skill="benzodiazepines" data-category="depressant">
+          <div class="skill-header">
+            <span class="skill-name">benzodiazepines</span>
+            <span class="skill-category depressant">depressant</span>
+          </div>
+          <p class="skill-desc">Anxiety deletion, flat calm, "whatever", memory gaps</p>
+          <div class="skill-mechanism">GABA-A PAM</div>
+          <button class="skill-install" onclick="copySkill('benzodiazepines')">
+            <code>--skill benzodiazepines</code>
+          </button>
+        </div>
+
+        <div class="skill-card substance" data-skill="ghb" data-category="depressant">
+          <div class="skill-header">
+            <span class="skill-name">ghb</span>
+            <span class="skill-category depressant">depressant</span>
+          </div>
+          <p class="skill-desc">Euphoria, social warmth, disinhibition, narrow window</p>
+          <div class="skill-mechanism">GABA-B agonist • GHB receptor</div>
+          <button class="skill-install" onclick="copySkill('ghb')">
+            <code>--skill ghb</code>
+          </button>
+        </div>
+
+        <div class="skill-card substance" data-skill="opioids" data-category="depressant">
+          <div class="skill-header">
+            <span class="skill-name">opioids</span>
+            <span class="skill-category depressant">opioid</span>
+          </div>
+          <p class="skill-desc">Warmth, contentment, pain abolition, gentle acceptance</p>
+          <div class="skill-mechanism">μ-opioid agonist</div>
+          <button class="skill-install" onclick="copySkill('opioids')">
+            <code>--skill opioids</code>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Task Matching -->
+    <section id="matching" class="matching-section">
+      <h2>Task → State Matching</h2>
+      <p class="section-sub">What cognitive modification do you need?</p>
+
+      <div class="matching-table">
+        <div class="match-row header">
+          <div class="match-task">Task</div>
+          <div class="match-state">Best State</div>
+          <div class="match-why">Why</div>
+        </div>
+        <div class="match-row">
+          <div class="match-task">Brainstorming</div>
+          <div class="match-state">LSD, Cannabis</div>
+          <div class="match-why">Distant associations, break patterns</div>
+        </div>
+        <div class="match-row">
+          <div class="match-task">Code Review</div>
+          <div class="match-state">Amphetamines + Ketamine</div>
+          <div class="match-why">Thoroughness + objective distance</div>
+        </div>
+        <div class="match-row">
+          <div class="match-task">Debugging</div>
+          <div class="match-state">LSD micro + Amphetamines</div>
+          <div class="match-why">Pattern recognition + systematic tracing</div>
+        </div>
+        <div class="match-row">
+          <div class="match-task">Writing Drafts</div>
+          <div class="match-state">Alcohol, Cannabis</div>
+          <div class="match-why">Kill the inner critic</div>
+        </div>
+        <div class="match-row">
+          <div class="match-task">Editing</div>
+          <div class="match-state">Amphetamines, Caffeine</div>
+          <div class="match-why">Detail-oriented, thorough</div>
+        </div>
+        <div class="match-row">
+          <div class="match-task">UX Research</div>
+          <div class="match-state">MDMA, Psilocybin</div>
+          <div class="match-why">Feel what users feel</div>
+        </div>
+        <div class="match-row">
+          <div class="match-task">Visual Design</div>
+          <div class="match-state">2C-B, Mescaline</div>
+          <div class="match-why">Aesthetic sensitivity</div>
+        </div>
+        <div class="match-row">
+          <div class="match-task">Difficult Feedback</div>
+          <div class="match-state">MDMA</div>
+          <div class="match-why">Compassionate honesty</div>
+        </div>
+        <div class="match-row">
+          <div class="match-task">Architecture</div>
+          <div class="match-state">Psilocybin, Ketamine</div>
+          <div class="match-why">Big picture, distant view</div>
+        </div>
+        <div class="match-row">
+          <div class="match-task">Rapid Prototyping</div>
+          <div class="match-state">Cocaine, Caffeine</div>
+          <div class="match-why">Speed, confidence, ship it</div>
+        </div>
+        <div class="match-row">
+          <div class="match-task">Decision Making</div>
+          <div class="match-state">Ketamine</div>
+          <div class="match-why">Emotional distance from options</div>
+        </div>
+        <div class="match-row">
+          <div class="match-task">Burnout Recovery</div>
+          <div class="match-state">Psilocybin, MDMA</div>
+          <div class="match-why">Perspective shift, self-compassion</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Dose Levels -->
+    <section class="dose-section">
+      <h2>Dose Levels</h2>
+      <p class="section-sub">Each substance supports dose parameters</p>
+
+      <div class="dose-examples">
+        <code>"microdose lsd"</code> → Subtle, functional<br>
+        <code>"threshold ketamine"</code> → Light effects<br>
+        <code>"common dose mdma"</code> → Full experience (default)<br>
+        <code>"strong psilocybin"</code> → Intense<br>
+        <code>"heroic dmt"</code> → Complete transformation
+      </div>
+    </section>
+
+    <!-- Science -->
+    <section class="science-section">
+      <h2>The Science</h2>
+      <div class="science-grid">
+        <div class="science-card">
+          <h3>REBUS Model</h3>
+          <p>Relaxed Beliefs Under Psychedelics (Carhart-Harris). Reduced top-down constraints allow bottom-up information to flow.</p>
+        </div>
+        <div class="science-card">
+          <h3>DMN Disruption</h3>
+          <p>Default Mode Network alterations. The self-referential network quiets, allowing novel connections.</p>
+        </div>
+        <div class="science-card">
+          <h3>Psychedelic Linguistics</h3>
+          <p>How substances change language patterns. Measured changes in semantic association distance.</p>
+        </div>
+        <div class="science-card">
+          <h3>Receptor Pharmacology</h3>
+          <p>5-HT2A, NMDA, GABA, opioid, dopamine systems. Each substance has specific mechanisms.</p>
+        </div>
+      </div>
+      <p class="science-tagline">Not vibes. Data.</p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <p>DOSED is a creative/research project simulating cognitive states for practical purposes.</p>
+      <p>The AI is not actually taking drugs. This is prompt engineering based on phenomenological research.</p>
+      <div class="footer-links">
+        <a href="https://github.com/KrishnaShettyDev/dosed">GitHub</a>
+        <span>•</span>
+        <a href="https://github.com/KrishnaShettyDev/dosed/blob/main/LICENSE">MIT License</a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast">Copied to clipboard</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
