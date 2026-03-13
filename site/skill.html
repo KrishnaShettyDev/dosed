@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOSED - Skill</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .skill-page {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--gray-500);
+      text-decoration: none;
+      font-size: 14px;
+      margin-bottom: 32px;
+    }
+
+    .back-link:hover {
+      color: var(--fg);
+    }
+
+    .skill-header {
+      margin-bottom: 32px;
+    }
+
+    .skill-title {
+      font-size: 32px;
+      font-weight: 600;
+      color: var(--fg);
+      margin-bottom: 8px;
+    }
+
+    .skill-source {
+      color: var(--gray-500);
+      font-size: 14px;
+    }
+
+    .skill-desc {
+      color: var(--gray-400);
+      font-size: 16px;
+      line-height: 1.7;
+      margin-bottom: 32px;
+      padding-bottom: 32px;
+      border-bottom: 1px solid var(--gray-800);
+    }
+
+    .install-section {
+      margin-bottom: 32px;
+    }
+
+    .install-label {
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      color: var(--gray-500);
+      margin-bottom: 12px;
+    }
+
+    .install-box {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: var(--gray-900);
+      border: 1px solid var(--gray-800);
+      border-radius: 6px;
+      padding: 14px 18px;
+      cursor: pointer;
+      transition: border-color 0.15s;
+    }
+
+    .install-box:hover {
+      border-color: var(--gray-600);
+    }
+
+    .install-prompt {
+      color: var(--gray-500);
+    }
+
+    .install-cmd {
+      color: var(--fg);
+      font-size: 14px;
+      flex: 1;
+    }
+
+    .install-copy {
+      color: var(--gray-500);
+    }
+
+    .skill-meta {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      padding: 24px 0;
+      border-top: 1px solid var(--gray-800);
+      border-bottom: 1px solid var(--gray-800);
+      margin-bottom: 32px;
+    }
+
+    .meta-item {
+      text-align: center;
+    }
+
+    .meta-value {
+      font-size: 24px;
+      font-weight: 600;
+      color: var(--fg);
+    }
+
+    .meta-label {
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      color: var(--gray-500);
+      margin-top: 4px;
+    }
+
+    .skill-content {
+      color: var(--gray-400);
+      line-height: 1.8;
+    }
+
+    .skill-content h2 {
+      color: var(--fg);
+      font-size: 18px;
+      margin: 32px 0 16px;
+    }
+
+    .skill-content ul {
+      margin-left: 20px;
+    }
+
+    .skill-content li {
+      margin-bottom: 8px;
+    }
+
+    .skill-content code {
+      background: var(--gray-900);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 13px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="header-left">
+      <a href="/" class="header-logo">
+        <svg height="18" viewBox="0 0 76 65" fill="currentColor">
+          <path d="M37.5274 0L75.0548 65H0L37.5274 0Z"></path>
+        </svg>
+      </a>
+      <span class="header-sep">/</span>
+      <a href="/" class="header-brand">DOSED</a>
+    </div>
+    <div class="header-right">
+      <a href="https://github.com/KrishnaShettyDev/dosed">Docs</a>
+    </div>
+  </header>
+
+  <main class="skill-page">
+    <a href="/" class="back-link">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M19 12H5M12 19l-7-7 7-7"/>
+      </svg>
+      Back to skills
+    </a>
+
+    <div class="skill-header">
+      <h1 class="skill-title" id="skill-title">Loading...</h1>
+      <p class="skill-source">KrishnaShettyDev/dosed</p>
+    </div>
+
+    <p class="skill-desc" id="skill-desc"></p>
+
+    <div class="install-section">
+      <p class="install-label">INSTALL</p>
+      <div class="install-box" onclick="copyInstall()">
+        <span class="install-prompt">$</span>
+        <code class="install-cmd" id="install-cmd">npx skills add KrishnaShettyDev/dosed</code>
+        <svg class="install-copy" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <rect width="14" height="14" x="8" y="8" rx="2"/>
+          <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/>
+        </svg>
+      </div>
+    </div>
+
+    <div class="skill-meta">
+      <div class="meta-item">
+        <div class="meta-value" id="skill-type">-</div>
+        <div class="meta-label">TYPE</div>
+      </div>
+      <div class="meta-item">
+        <div class="meta-value">v1.0</div>
+        <div class="meta-label">VERSION</div>
+      </div>
+      <div class="meta-item">
+        <div class="meta-value">MIT</div>
+        <div class="meta-label">LICENSE</div>
+      </div>
+    </div>
+
+    <div class="skill-content" id="skill-content"></div>
+  </main>
+
+  <div class="toast" id="toast">Copied!</div>
+
+  <script>
+    const skills = {
+      dosed: {
+        name: 'dosed',
+        type: 'recommender',
+        desc: 'Task recommender - "What state should I use for X?"',
+        content: `
+          <h2>What is this?</h2>
+          <p>The meta-skill that recommends which cognitive state to use for your specific task.</p>
+          <h2>Usage</h2>
+          <p>Just ask: "What state should I use for brainstorming features?" and get a recommended skill with reasoning.</p>
+          <h2>Example</h2>
+          <ul>
+            <li><code>/dosed</code> - "I need to debug a race condition" → Recommends LSD+Amphetamine stack</li>
+            <li><code>/dosed</code> - "I need to give difficult feedback" → Recommends MDMA</li>
+          </ul>
+        `
+      },
+      brainstorm: {
+        name: 'brainstorm',
+        type: 'LSD',
+        desc: 'LSD-enhanced ideation for creative solutions',
+        content: `
+          <h2>Cognitive Stack</h2>
+          <p>LSD pattern recognition + distant associations</p>
+          <h2>What it does</h2>
+          <ul>
+            <li>Obvious ideas (baseline)</li>
+            <li>Adjacent ideas (one step out)</li>
+            <li>DISTANT ideas (unexpected connections)</li>
+            <li>Absurd ideas (seeds for innovation)</li>
+            <li>Pattern synthesis</li>
+          </ul>
+        `
+      },
+      'code-review': {
+        name: 'code-review',
+        type: 'Amph+Ket',
+        desc: 'Thorough + objective code review with Amphetamine focus and Ketamine distance',
+        content: `
+          <h2>Cognitive Stack</h2>
+          <p>Amphetamine thoroughness + Ketamine objectivity</p>
+          <h2>Output Format</h2>
+          <ul>
+            <li>Architecture view (Ketamine distance)</li>
+            <li>Line-by-line findings (Amphetamine focus)</li>
+            <li>Pattern detection</li>
+            <li>Prioritized issues: critical/important/minor</li>
+          </ul>
+        `
+      },
+      debug: {
+        name: 'debug',
+        type: 'LSD+Amph',
+        desc: 'Pattern recognition + systematic tracing for debugging',
+        content: `
+          <h2>Cognitive Stack</h2>
+          <p>LSD pattern matching + Amphetamine systematic tracing</p>
+          <h2>Best For</h2>
+          <ul>
+            <li>Race conditions</li>
+            <li>Memory leaks</li>
+            <li>Complex state bugs</li>
+            <li>Intermittent failures</li>
+          </ul>
+        `
+      },
+      write: {
+        name: 'write',
+        type: 'Alc→Amph',
+        desc: 'Draft without critic (Alcohol), edit with precision (Amphetamine)',
+        content: `
+          <h2>Two-Phase Process</h2>
+          <ul>
+            <li><strong>Phase 1 (Alcohol):</strong> Kill the inner critic, free flow writing</li>
+            <li><strong>Phase 2 (Amphetamine):</strong> Precise editing, detail focus</li>
+          </ul>
+        `
+      },
+      design: {
+        name: 'design',
+        type: '2CB+MDMA',
+        desc: 'Sensory aesthetics (2C-B) + user empathy (MDMA) for UI/UX',
+        content: `
+          <h2>Cognitive Stack</h2>
+          <p>2C-B sensory enhancement + MDMA user empathy</p>
+          <h2>Best For</h2>
+          <ul>
+            <li>UI/UX design</li>
+            <li>Visual aesthetics</li>
+            <li>User experience flows</li>
+            <li>Accessibility considerations</li>
+          </ul>
+        `
+      },
+      feedback: {
+        name: 'feedback',
+        type: 'MDMA',
+        desc: 'Deliver hard truths with genuine care using MDMA compassion',
+        content: `
+          <h2>Cognitive Stack</h2>
+          <p>MDMA compassionate honesty</p>
+          <h2>Output Format</h2>
+          <ul>
+            <li>Empathy mapping (how they'll receive it)</li>
+            <li>The core truth (unhedged)</li>
+            <li>Delivery script (warm but honest)</li>
+            <li>Support offers</li>
+          </ul>
+        `
+      },
+      lsd: {
+        name: 'lsd',
+        type: 'psychedelic',
+        desc: 'Pattern recognition, distant associations, synesthesia, ego dissolution',
+        content: `
+          <h2>Key Cognitive Modifications</h2>
+          <ul>
+            <li>Pattern recognition across domains</li>
+            <li>Distant associations</li>
+            <li>Synesthetic thinking</li>
+            <li>Ego dissolution</li>
+            <li>Time dilation</li>
+          </ul>
+        `
+      },
+      mdma: {
+        name: 'mdma',
+        type: 'empathogen',
+        desc: 'Radical empathy, warmth, reduced fear, compassionate honesty',
+        content: `
+          <h2>Key Cognitive Modifications</h2>
+          <ul>
+            <li>Radical empathy</li>
+            <li>Reduced fear response</li>
+            <li>Warmth and connection</li>
+            <li>Compassionate honesty</li>
+          </ul>
+        `
+      },
+      psilocybin: {
+        name: 'psilocybin',
+        type: 'psychedelic',
+        desc: 'Mystical perspective, ego softening, nature connection',
+        content: `<h2>Key Cognitive Modifications</h2><ul><li>Mystical perspective</li><li>Ego softening</li><li>Nature connection</li><li>Beginner's mind</li></ul>`
+      },
+      dmt: {
+        name: 'dmt',
+        type: 'psychedelic',
+        desc: 'Entity contact, reality replacement, visual language, breakthrough',
+        content: `<h2>Key Cognitive Modifications</h2><ul><li>Entity contact</li><li>Reality replacement</li><li>Visual language</li><li>Breakthrough experiences</li></ul>`
+      },
+      ketamine: {
+        name: 'ketamine',
+        type: 'dissociative',
+        desc: 'Objective distance, dissociation, watching self think',
+        content: `<h2>Key Cognitive Modifications</h2><ul><li>Objective distance</li><li>Dissociation from emotion</li><li>Watching self think</li><li>K-hole perspective</li></ul>`
+      },
+      cannabis: {
+        name: 'cannabis',
+        type: 'cannabinoid',
+        desc: 'Time dilation, tangential thinking, lost threads, giggly',
+        content: `<h2>Key Cognitive Modifications</h2><ul><li>Time dilation</li><li>Tangential thinking</li><li>Lost threads</li><li>Enhanced appreciation</li></ul>`
+      },
+      cocaine: {
+        name: 'cocaine',
+        type: 'stimulant',
+        desc: 'Supreme confidence, speed, grandiosity, rapid output',
+        content: `<h2>Key Cognitive Modifications</h2><ul><li>Supreme confidence</li><li>Speed and urgency</li><li>Grandiosity</li><li>Rapid output</li></ul>`
+      },
+      amphetamines: {
+        name: 'amphetamines',
+        type: 'stimulant',
+        desc: 'Hyperfocus, detail orientation, task completion drive',
+        content: `<h2>Key Cognitive Modifications</h2><ul><li>Hyperfocus</li><li>Detail orientation</li><li>Task completion drive</li><li>Systematic approach</li></ul>`
+      },
+      caffeine: {
+        name: 'caffeine',
+        type: 'stimulant',
+        desc: 'Alertness, focus, thoroughness, mild enhancement',
+        content: `<h2>Key Cognitive Modifications</h2><ul><li>Alertness</li><li>Focus</li><li>Thoroughness</li><li>Mild enhancement</li></ul>`
+      },
+      opioids: {
+        name: 'opioids',
+        type: 'opioid',
+        desc: 'Warmth, contentment, pain abolition, gentle acceptance',
+        content: `<h2>Key Cognitive Modifications</h2><ul><li>Warmth</li><li>Contentment</li><li>Pain abolition</li><li>Gentle acceptance</li></ul>`
+      },
+      alcohol: {
+        name: 'alcohol',
+        type: 'depressant',
+        desc: 'Disinhibition, critic offline, oversharing, sloppy warmth',
+        content: `<h2>Key Cognitive Modifications</h2><ul><li>Disinhibition</li><li>Inner critic offline</li><li>Oversharing</li><li>Sloppy warmth</li></ul>`
+      },
+      benzodiazepines: {
+        name: 'benzodiazepines',
+        type: 'depressant',
+        desc: 'Anxiety deletion, flat calm, "whatever", memory gaps',
+        content: `<h2>Key Cognitive Modifications</h2><ul><li>Anxiety deletion</li><li>Flat calm</li><li>"Whatever" attitude</li><li>Memory gaps</li></ul>`
+      },
+      salvia: {
+        name: 'salvia',
+        type: 'psychedelic',
+        desc: 'Ontological confusion, becoming objects, bizarre short trip',
+        content: `<h2>Key Cognitive Modifications</h2><ul><li>Ontological confusion</li><li>Becoming objects</li><li>Bizarre perspectives</li><li>Short duration</li></ul>`
+      },
+      '2cb': {
+        name: '2cb',
+        type: 'psychedelic',
+        desc: 'Sensory enhancement, tactile pleasure, playful, mentally clear',
+        content: `<h2>Key Cognitive Modifications</h2><ul><li>Sensory enhancement</li><li>Tactile pleasure</li><li>Playfulness</li><li>Mental clarity</li></ul>`
+      },
+      ghb: {
+        name: 'ghb',
+        type: 'depressant',
+        desc: 'Euphoria, social warmth, disinhibition, narrow dosing window',
+        content: `<h2>Key Cognitive Modifications</h2><ul><li>Euphoria</li><li>Social warmth</li><li>Disinhibition</li><li>Narrow dosing window</li></ul>`
+      },
+      nitrous: {
+        name: 'nitrous',
+        type: 'dissociative',
+        desc: 'Brief revelation, immediate amnesia, giggles, wah-wah',
+        content: `<h2>Key Cognitive Modifications</h2><ul><li>Brief revelation</li><li>Immediate amnesia</li><li>Giggles</li><li>Wah-wah effect</li></ul>`
+      },
+      mescaline: {
+        name: 'mescaline',
+        type: 'psychedelic',
+        desc: 'Visual beauty, sacred geometry, earth connection, slow onset',
+        content: `<h2>Key Cognitive Modifications</h2><ul><li>Visual beauty</li><li>Sacred geometry</li><li>Earth connection</li><li>Slow onset</li></ul>`
+      }
+    };
+
+    // Get skill from URL
+    const params = new URLSearchParams(window.location.search);
+    const skillId = params.get('s');
+    const skill = skills[skillId];
+
+    if (skill) {
+      document.title = `DOSED - ${skill.name}`;
+      document.getElementById('skill-title').textContent = skill.name;
+      document.getElementById('skill-desc').textContent = skill.desc;
+      document.getElementById('skill-type').textContent = skill.type;
+      document.getElementById('install-cmd').textContent = `npx skills add KrishnaShettyDev/dosed --skill ${skill.name}`;
+      document.getElementById('skill-content').innerHTML = skill.content;
+    } else {
+      document.getElementById('skill-title').textContent = 'Skill not found';
+      document.getElementById('skill-desc').textContent = 'This skill does not exist.';
+    }
+
+    function copyInstall() {
+      const cmd = document.getElementById('install-cmd').textContent;
+      navigator.clipboard.writeText(cmd);
+      showToast();
+    }
+
+    function showToast() {
+      const toast = document.getElementById('toast');
+      toast.classList.add('show');
+      setTimeout(() => toast.classList.remove('show'), 2000);
+    }
+  </script>
+</body>
+</html>
