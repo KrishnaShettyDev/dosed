@@ -28,7 +28,7 @@ const skills = {
 
 // Copy install command
 function copyCmd() {
-  navigator.clipboard.writeText('npx dosed');
+  navigator.clipboard.writeText('npx get-dosed');
   showToast();
 }
 

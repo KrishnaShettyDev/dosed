@@ -1,5 +1,5 @@
 {
-  "name": "dosed",
+  "name": "get-dosed",
   "version": "1.0.0",
   "description": "Cognitive tools for AI agents. Task-matched mental modes based on phenomenological research.",
   "bin": {
