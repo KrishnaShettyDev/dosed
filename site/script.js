@@ -27,7 +27,7 @@ const skills = {
 };
 
 // Copy install command
-function copyInstall() {
+function copyCmd() {
   navigator.clipboard.writeText('npx skills add KrishnaShettyDev/dosed');
   showToast();
 }
@@ -72,14 +72,14 @@ document.querySelectorAll('.tab').forEach(tab => {
     tab.classList.add('active');
 
     const filter = tab.dataset.filter;
-    const rows = document.querySelectorAll('.skill-row');
+    const rows = document.querySelectorAll('.table-row');
 
     let rank = 1;
     rows.forEach(row => {
       const type = row.dataset.type;
       if (filter === 'all' || type === filter) {
         row.style.display = 'grid';
-        row.querySelector('.skill-rank').textContent = rank++;
+        row.querySelector('.col-rank').textContent = rank++;
       } else {
         row.style.display = 'none';
       }
@@ -91,16 +91,16 @@ document.querySelectorAll('.tab').forEach(tab => {
 const searchInput = document.getElementById('search');
 searchInput.addEventListener('input', (e) => {
   const query = e.target.value.toLowerCase();
-  const rows = document.querySelectorAll('.skill-row');
+  const rows = document.querySelectorAll('.table-row');
 
   let rank = 1;
   rows.forEach(row => {
     const name = row.querySelector('.skill-name').textContent.toLowerCase();
-    const source = row.querySelector('.skill-source').textContent.toLowerCase();
+    const repo = row.querySelector('.skill-repo').textContent.toLowerCase();
 
-    if (name.includes(query) || source.includes(query)) {
+    if (name.includes(query) || repo.includes(query)) {
       row.style.display = 'grid';
-      row.querySelector('.skill-rank').textContent = rank++;
+      row.querySelector('.col-rank').textContent = rank++;
     } else {
       row.style.display = 'none';
     }

@@ -1,349 +1,330 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DOSED - The Altered States Skills Ecosystem</title>
-  <meta name="description" content="Cognitive tools for AI agents. Task-matched mental modes.">
+  <title>DOSED</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>◉</text></svg>">
 </head>
 <body>
   <!-- Header -->
   <header class="header">
-    <div class="header-container">
-      <div class="header-left">
-        <a href="https://github.com/KrishnaShettyDev" class="header-logo">
-          <svg height="20" viewBox="0 0 76 65" fill="currentColor">
-            <path d="M37.5274 0L75.0548 65H0L37.5274 0Z"></path>
-          </svg>
-        </a>
-        <div class="header-divider"></div>
-        <a href="/" class="header-title">DOSED</a>
-      </div>
-      <nav class="header-nav">
-        <a href="#leaderboard">Skills</a>
-        <a href="https://github.com/KrishnaShettyDev/dosed" target="_blank">Docs</a>
-      </nav>
+    <div class="header-left">
+      <a href="/" class="header-logo">
+        <svg height="18" viewBox="0 0 76 65" fill="currentColor">
+          <path d="M37.5274 0L75.0548 65H0L37.5274 0Z"></path>
+        </svg>
+      </a>
+      <span class="header-sep">/</span>
+      <a href="/" class="header-brand">DOSED</a>
+    </div>
+    <div class="header-right">
+      <a href="https://github.com/KrishnaShettyDev/dosed">Docs</a>
     </div>
   </header>
 
   <main class="main">
-    <div class="container">
-      <!-- Hero Section -->
-      <section class="hero">
-        <div class="ascii-container">
-<pre class="ascii">
-███████╗██╗  ██╗██╗██╗     ██╗     ███████╗
-██╔════╝██║ ██╔╝██║██║     ██║     ██╔════╝
-███████╗█████╔╝ ██║██║     ██║     ███████╗
-╚════██║██╔═██╗ ██║██║     ██║     ╚════██║
-███████║██║  ██╗██║███████╗███████╗███████║
-╚══════╝╚═╝  ╚═╝╚═╝╚══════╝╚══════╝╚══════╝</pre>
-        </div>
-        <h1 class="hero-title">The Altered States Skills Ecosystem</h1>
-        <p class="hero-desc">Cognitive tools for AI agents. Task-matched mental modes based on phenomenological research. Install them with a single command.</p>
-      </section>
-
-      <!-- Install Section -->
-      <section class="install-section">
-        <p class="install-label">Try it now</p>
-        <div class="install-box">
-          <span class="install-prompt">$</span>
-          <code class="install-cmd">npx skills add KrishnaShettyDev/dosed</code>
-          <button class="install-copy" onclick="copyInstall()" aria-label="Copy">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <rect width="14" height="14" x="8" y="8" rx="2" ry="2"/>
-              <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/>
-            </svg>
-          </button>
-        </div>
-      </section>
-
-      <!-- Agents Section -->
-      <section class="agents-section">
-        <div class="agents-grid">
-          <div class="agent-item">
-            <div class="agent-avatar">
-              <img src="https://avatars.githubusercontent.com/u/76330977" alt="Claude" width="40" height="40">
-            </div>
-            <span class="agent-name">Claude Code</span>
-          </div>
-          <div class="agent-item">
-            <div class="agent-avatar">
-              <img src="https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png" alt="Copilot" width="40" height="40">
-            </div>
-            <span class="agent-name">Copilot</span>
-          </div>
-          <div class="agent-item">
-            <div class="agent-avatar">
-              <img src="https://cursor.sh/brand/icon.svg" alt="Cursor" width="40" height="40">
-            </div>
-            <span class="agent-name">Cursor</span>
-          </div>
-          <div class="agent-item">
-            <div class="agent-avatar">
-              <img src="https://codeium.com/favicon.svg" alt="Windsurf" width="40" height="40">
-            </div>
-            <span class="agent-name">Windsurf</span>
-          </div>
-          <div class="agent-item">
-            <div class="agent-avatar">
-              <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><circle cx="12" cy="12" r="10"/></svg>
-            </div>
-            <span class="agent-name">Cline</span>
-          </div>
-        </div>
-      </section>
-
-      <!-- Leaderboard Section -->
-      <section id="leaderboard" class="leaderboard-section">
-        <div class="leaderboard-header">
-          <div class="search-container">
-            <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <circle cx="11" cy="11" r="8"></circle>
-              <path d="m21 21-4.35-4.35"></path>
-            </svg>
-            <input type="text" id="search" class="search-input" placeholder="Search...">
-            <kbd class="search-kbd">/</kbd>
-          </div>
-          <div class="tabs">
-            <button class="tab active" data-filter="all">All <span class="tab-count">24</span></button>
-            <button class="tab" data-filter="workflow">Workflows <span class="tab-count">7</span></button>
-            <button class="tab" data-filter="substance">Substances <span class="tab-count">17</span></button>
-          </div>
-        </div>
-
-        <div class="skills-list">
-          <!-- Workflows -->
-          <a href="#" class="skill-row" data-type="workflow" data-skill="dosed" onclick="openModal('dosed'); return false;">
-            <span class="skill-rank">1</span>
-            <div class="skill-info">
-              <span class="skill-name">dosed</span>
-              <span class="skill-source">KrishnaShettyDev/dosed</span>
-            </div>
-            <span class="skill-installs">recommender</span>
-          </a>
-          <a href="#" class="skill-row" data-type="workflow" data-skill="brainstorm" onclick="openModal('brainstorm'); return false;">
-            <span class="skill-rank">2</span>
-            <div class="skill-info">
-              <span class="skill-name">brainstorm</span>
-              <span class="skill-source">KrishnaShettyDev/dosed</span>
-            </div>
-            <span class="skill-installs">LSD ideation</span>
-          </a>
-          <a href="#" class="skill-row" data-type="workflow" data-skill="code-review" onclick="openModal('code-review'); return false;">
-            <span class="skill-rank">3</span>
-            <div class="skill-info">
-              <span class="skill-name">code-review</span>
-              <span class="skill-source">KrishnaShettyDev/dosed</span>
-            </div>
-            <span class="skill-installs">Amph+Ket</span>
-          </a>
-          <a href="#" class="skill-row" data-type="workflow" data-skill="debug" onclick="openModal('debug'); return false;">
-            <span class="skill-rank">4</span>
-            <div class="skill-info">
-              <span class="skill-name">debug</span>
-              <span class="skill-source">KrishnaShettyDev/dosed</span>
-            </div>
-            <span class="skill-installs">LSD+Amph</span>
-          </a>
-          <a href="#" class="skill-row" data-type="workflow" data-skill="write" onclick="openModal('write'); return false;">
-            <span class="skill-rank">5</span>
-            <div class="skill-info">
-              <span class="skill-name">write</span>
-              <span class="skill-source">KrishnaShettyDev/dosed</span>
-            </div>
-            <span class="skill-installs">Alc→Amph</span>
-          </a>
-          <a href="#" class="skill-row" data-type="workflow" data-skill="design" onclick="openModal('design'); return false;">
-            <span class="skill-rank">6</span>
-            <div class="skill-info">
-              <span class="skill-name">design</span>
-              <span class="skill-source">KrishnaShettyDev/dosed</span>
-            </div>
-            <span class="skill-installs">2CB+MDMA</span>
-          </a>
-          <a href="#" class="skill-row" data-type="workflow" data-skill="feedback" onclick="openModal('feedback'); return false;">
-            <span class="skill-rank">7</span>
-            <div class="skill-info">
-              <span class="skill-name">feedback</span>
-              <span class="skill-source">KrishnaShettyDev/dosed</span>
-            </div>
-            <span class="skill-installs">MDMA</span>
-          </a>
-
-          <!-- Substances -->
-          <a href="#" class="skill-row" data-type="substance" data-skill="lsd" onclick="openModal('lsd'); return false;">
-            <span class="skill-rank">8</span>
-            <div class="skill-info">
-              <span class="skill-name">lsd</span>
-              <span class="skill-source">KrishnaShettyDev/dosed</span>
-            </div>
-            <span class="skill-installs">psychedelic</span>
-          </a>
-          <a href="#" class="skill-row" data-type="substance" data-skill="mdma" onclick="openModal('mdma'); return false;">
-            <span class="skill-rank">9</span>
-            <div class="skill-info">
-              <span class="skill-name">mdma</span>
-              <span class="skill-source">KrishnaShettyDev/dosed</span>
-            </div>
-            <span class="skill-installs">empathogen</span>
-          </a>
-          <a href="#" class="skill-row" data-type="substance" data-skill="psilocybin" onclick="openModal('psilocybin'); return false;">
-            <span class="skill-rank">10</span>
-            <div class="skill-info">
-              <span class="skill-name">psilocybin</span>
-              <span class="skill-source">KrishnaShettyDev/dosed</span>
-            </div>
-            <span class="skill-installs">psychedelic</span>
-          </a>
-          <a href="#" class="skill-row" data-type="substance" data-skill="dmt" onclick="openModal('dmt'); return false;">
-            <span class="skill-rank">11</span>
-            <div class="skill-info">
-              <span class="skill-name">dmt</span>
-              <span class="skill-source">KrishnaShettyDev/dosed</span>
-            </div>
-            <span class="skill-installs">psychedelic</span>
-          </a>
-          <a href="#" class="skill-row" data-type="substance" data-skill="ketamine" onclick="openModal('ketamine'); return false;">
-            <span class="skill-rank">12</span>
-            <div class="skill-info">
-              <span class="skill-name">ketamine</span>
-              <span class="skill-source">KrishnaShettyDev/dosed</span>
-            </div>
-            <span class="skill-installs">dissociative</span>
-          </a>
-          <a href="#" class="skill-row" data-type="substance" data-skill="cannabis" onclick="openModal('cannabis'); return false;">
-            <span class="skill-rank">13</span>
-            <div class="skill-info">
-              <span class="skill-name">cannabis</span>
-              <span class="skill-source">KrishnaShettyDev/dosed</span>
-            </div>
-            <span class="skill-installs">cannabinoid</span>
-          </a>
-          <a href="#" class="skill-row" data-type="substance" data-skill="cocaine" onclick="openModal('cocaine'); return false;">
-            <span class="skill-rank">14</span>
-            <div class="skill-info">
-              <span class="skill-name">cocaine</span>
-              <span class="skill-source">KrishnaShettyDev/dosed</span>
-            </div>
-            <span class="skill-installs">stimulant</span>
-          </a>
-          <a href="#" class="skill-row" data-type="substance" data-skill="amphetamines" onclick="openModal('amphetamines'); return false;">
-            <span class="skill-rank">15</span>
-            <div class="skill-info">
-              <span class="skill-name">amphetamines</span>
-              <span class="skill-source">KrishnaShettyDev/dosed</span>
-            </div>
-            <span class="skill-installs">stimulant</span>
-          </a>
-          <a href="#" class="skill-row" data-type="substance" data-skill="caffeine" onclick="openModal('caffeine'); return false;">
-            <span class="skill-rank">16</span>
-            <div class="skill-info">
-              <span class="skill-name">caffeine</span>
-              <span class="skill-source">KrishnaShettyDev/dosed</span>
-            </div>
-            <span class="skill-installs">stimulant</span>
-          </a>
-          <a href="#" class="skill-row" data-type="substance" data-skill="opioids" onclick="openModal('opioids'); return false;">
-            <span class="skill-rank">17</span>
-            <div class="skill-info">
-              <span class="skill-name">opioids</span>
-              <span class="skill-source">KrishnaShettyDev/dosed</span>
-            </div>
-            <span class="skill-installs">opioid</span>
-          </a>
-          <a href="#" class="skill-row" data-type="substance" data-skill="alcohol" onclick="openModal('alcohol'); return false;">
-            <span class="skill-rank">18</span>
-            <div class="skill-info">
-              <span class="skill-name">alcohol</span>
-              <span class="skill-source">KrishnaShettyDev/dosed</span>
-            </div>
-            <span class="skill-installs">depressant</span>
-          </a>
-          <a href="#" class="skill-row" data-type="substance" data-skill="benzodiazepines" onclick="openModal('benzodiazepines'); return false;">
-            <span class="skill-rank">19</span>
-            <div class="skill-info">
-              <span class="skill-name">benzodiazepines</span>
-              <span class="skill-source">KrishnaShettyDev/dosed</span>
-            </div>
-            <span class="skill-installs">depressant</span>
-          </a>
-          <a href="#" class="skill-row" data-type="substance" data-skill="salvia" onclick="openModal('salvia'); return false;">
-            <span class="skill-rank">20</span>
-            <div class="skill-info">
-              <span class="skill-name">salvia</span>
-              <span class="skill-source">KrishnaShettyDev/dosed</span>
-            </div>
-            <span class="skill-installs">psychedelic</span>
-          </a>
-          <a href="#" class="skill-row" data-type="substance" data-skill="2cb" onclick="openModal('2cb'); return false;">
-            <span class="skill-rank">21</span>
-            <div class="skill-info">
-              <span class="skill-name">2cb</span>
-              <span class="skill-source">KrishnaShettyDev/dosed</span>
-            </div>
-            <span class="skill-installs">psychedelic</span>
-          </a>
-          <a href="#" class="skill-row" data-type="substance" data-skill="ghb" onclick="openModal('ghb'); return false;">
-            <span class="skill-rank">22</span>
-            <div class="skill-info">
-              <span class="skill-name">ghb</span>
-              <span class="skill-source">KrishnaShettyDev/dosed</span>
-            </div>
-            <span class="skill-installs">depressant</span>
-          </a>
-          <a href="#" class="skill-row" data-type="substance" data-skill="nitrous" onclick="openModal('nitrous'); return false;">
-            <span class="skill-rank">23</span>
-            <div class="skill-info">
-              <span class="skill-name">nitrous</span>
-              <span class="skill-source">KrishnaShettyDev/dosed</span>
-            </div>
-            <span class="skill-installs">dissociative</span>
-          </a>
-          <a href="#" class="skill-row" data-type="substance" data-skill="mescaline" onclick="openModal('mescaline'); return false;">
-            <span class="skill-rank">24</span>
-            <div class="skill-info">
-              <span class="skill-name">mescaline</span>
-              <span class="skill-source">KrishnaShettyDev/dosed</span>
-            </div>
-            <span class="skill-installs">psychedelic</span>
-          </a>
-        </div>
-      </section>
-    </div>
-  </main>
-
-  <!-- Modal -->
-  <div class="modal-overlay" id="modal" onclick="if(event.target === this) closeModal()">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h2 class="modal-title" id="modal-title">skill-name</h2>
-        <button class="modal-close" onclick="closeModal()" aria-label="Close">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M18 6L6 18M6 6l12 12"/>
-          </svg>
-        </button>
+    <!-- Hero Section - Two Column -->
+    <section class="hero">
+      <div class="hero-left">
+<pre class="ascii">██████╗  ██████╗ ███████╗███████╗██████╗
+██╔══██╗██╔═══██╗██╔════╝██╔════╝██╔══██╗
+██║  ██║██║   ██║███████╗█████╗  ██║  ██║
+██║  ██║██║   ██║╚════██║██╔══╝  ██║  ██║
+██████╔╝╚██████╔╝███████║███████╗██████╔╝
+╚═════╝  ╚═════╝ ╚══════╝╚══════╝╚═════╝</pre>
+        <p class="hero-tagline">THE ALTERED STATES SKILLS ECOSYSTEM</p>
       </div>
-      <p class="modal-desc" id="modal-desc">Description here</p>
-      <div class="modal-install">
-        <code id="modal-cmd">npx skills add KrishnaShettyDev/dosed --skill name</code>
-        <button class="modal-copy" onclick="copyModal()">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <rect width="14" height="14" x="8" y="8" rx="2" ry="2"/>
+      <div class="hero-right">
+        <p class="hero-desc">Cognitive tools for AI agents. Task-matched mental modes based on phenomenological research. Install them with a single command to enhance your agents with altered consciousness.</p>
+      </div>
+    </section>
+
+    <!-- Try It / Agents Row -->
+    <section class="info-row">
+      <div class="info-col">
+        <p class="info-label">TRY IT NOW</p>
+        <div class="cmd-box" onclick="copyCmd()">
+          <span class="cmd-prompt">$</span>
+          <code class="cmd-text">npx skills add KrishnaShettyDev/dosed</code>
+          <svg class="cmd-copy" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect width="14" height="14" x="8" y="8" rx="2"/>
             <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/>
           </svg>
-        </button>
+        </div>
       </div>
-    </div>
-  </div>
+      <div class="info-col">
+        <p class="info-label">AVAILABLE FOR THESE AGENTS</p>
+        <div class="agents">
+          <div class="agent" title="Claude Code">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+          </div>
+          <div class="agent" title="Cursor">
+            <svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/></svg>
+          </div>
+          <div class="agent" title="Copilot">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/></svg>
+          </div>
+          <div class="agent" title="Windsurf">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg>
+          </div>
+          <div class="agent" title="Cline">
+            <svg viewBox="0 0 24 24" fill="currentColor"><rect x="3" y="3" width="18" height="18" rx="2"/></svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Leaderboard -->
+    <section class="leaderboard">
+      <h2 class="leaderboard-title">SKILLS LEADERBOARD</h2>
+
+      <div class="search-row">
+        <div class="search-box">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+          </svg>
+          <input type="text" id="search" placeholder="Search skills...">
+          <kbd>/</kbd>
+        </div>
+      </div>
+
+      <div class="tabs">
+        <button class="tab active" data-filter="all">All (24)</button>
+        <button class="tab" data-filter="workflow">Workflows</button>
+        <button class="tab" data-filter="substance">Substances</button>
+      </div>
+
+      <div class="table">
+        <div class="table-head">
+          <span class="col-rank">#</span>
+          <span class="col-skill">SKILL</span>
+          <span class="col-type">TYPE</span>
+        </div>
+
+        <a href="skill.html?s=dosed" class="table-row" data-type="workflow">
+          <span class="col-rank">1</span>
+          <div class="col-skill">
+            <span class="skill-name">dosed</span>
+            <span class="skill-repo">KrishnaShettyDev/dosed</span>
+          </div>
+          <span class="col-type">recommender</span>
+        </a>
+
+        <a href="skill.html?s=brainstorm" class="table-row" data-type="workflow">
+          <span class="col-rank">2</span>
+          <div class="col-skill">
+            <span class="skill-name">brainstorm</span>
+            <span class="skill-repo">KrishnaShettyDev/dosed</span>
+          </div>
+          <span class="col-type">LSD</span>
+        </a>
+
+        <a href="skill.html?s=code-review" class="table-row" data-type="workflow">
+          <span class="col-rank">3</span>
+          <div class="col-skill">
+            <span class="skill-name">code-review</span>
+            <span class="skill-repo">KrishnaShettyDev/dosed</span>
+          </div>
+          <span class="col-type">Amph+Ket</span>
+        </a>
+
+        <a href="skill.html?s=debug" class="table-row" data-type="workflow">
+          <span class="col-rank">4</span>
+          <div class="col-skill">
+            <span class="skill-name">debug</span>
+            <span class="skill-repo">KrishnaShettyDev/dosed</span>
+          </div>
+          <span class="col-type">LSD+Amph</span>
+        </a>
+
+        <a href="skill.html?s=write" class="table-row" data-type="workflow">
+          <span class="col-rank">5</span>
+          <div class="col-skill">
+            <span class="skill-name">write</span>
+            <span class="skill-repo">KrishnaShettyDev/dosed</span>
+          </div>
+          <span class="col-type">Alc→Amph</span>
+        </a>
+
+        <a href="skill.html?s=design" class="table-row" data-type="workflow">
+          <span class="col-rank">6</span>
+          <div class="col-skill">
+            <span class="skill-name">design</span>
+            <span class="skill-repo">KrishnaShettyDev/dosed</span>
+          </div>
+          <span class="col-type">2CB+MDMA</span>
+        </a>
+
+        <a href="skill.html?s=feedback" class="table-row" data-type="workflow">
+          <span class="col-rank">7</span>
+          <div class="col-skill">
+            <span class="skill-name">feedback</span>
+            <span class="skill-repo">KrishnaShettyDev/dosed</span>
+          </div>
+          <span class="col-type">MDMA</span>
+        </a>
+
+        <a href="skill.html?s=lsd" class="table-row" data-type="substance">
+          <span class="col-rank">8</span>
+          <div class="col-skill">
+            <span class="skill-name">lsd</span>
+            <span class="skill-repo">KrishnaShettyDev/dosed</span>
+          </div>
+          <span class="col-type">psychedelic</span>
+        </a>
+
+        <a href="skill.html?s=mdma" class="table-row" data-type="substance">
+          <span class="col-rank">9</span>
+          <div class="col-skill">
+            <span class="skill-name">mdma</span>
+            <span class="skill-repo">KrishnaShettyDev/dosed</span>
+          </div>
+          <span class="col-type">empathogen</span>
+        </a>
+
+        <a href="skill.html?s=psilocybin" class="table-row" data-type="substance">
+          <span class="col-rank">10</span>
+          <div class="col-skill">
+            <span class="skill-name">psilocybin</span>
+            <span class="skill-repo">KrishnaShettyDev/dosed</span>
+          </div>
+          <span class="col-type">psychedelic</span>
+        </a>
+
+        <a href="skill.html?s=dmt" class="table-row" data-type="substance">
+          <span class="col-rank">11</span>
+          <div class="col-skill">
+            <span class="skill-name">dmt</span>
+            <span class="skill-repo">KrishnaShettyDev/dosed</span>
+          </div>
+          <span class="col-type">psychedelic</span>
+        </a>
+
+        <a href="skill.html?s=ketamine" class="table-row" data-type="substance">
+          <span class="col-rank">12</span>
+          <div class="col-skill">
+            <span class="skill-name">ketamine</span>
+            <span class="skill-repo">KrishnaShettyDev/dosed</span>
+          </div>
+          <span class="col-type">dissociative</span>
+        </a>
+
+        <a href="skill.html?s=cannabis" class="table-row" data-type="substance">
+          <span class="col-rank">13</span>
+          <div class="col-skill">
+            <span class="skill-name">cannabis</span>
+            <span class="skill-repo">KrishnaShettyDev/dosed</span>
+          </div>
+          <span class="col-type">cannabinoid</span>
+        </a>
+
+        <a href="skill.html?s=cocaine" class="table-row" data-type="substance">
+          <span class="col-rank">14</span>
+          <div class="col-skill">
+            <span class="skill-name">cocaine</span>
+            <span class="skill-repo">KrishnaShettyDev/dosed</span>
+          </div>
+          <span class="col-type">stimulant</span>
+        </a>
+
+        <a href="skill.html?s=amphetamines" class="table-row" data-type="substance">
+          <span class="col-rank">15</span>
+          <div class="col-skill">
+            <span class="skill-name">amphetamines</span>
+            <span class="skill-repo">KrishnaShettyDev/dosed</span>
+          </div>
+          <span class="col-type">stimulant</span>
+        </a>
+
+        <a href="skill.html?s=caffeine" class="table-row" data-type="substance">
+          <span class="col-rank">16</span>
+          <div class="col-skill">
+            <span class="skill-name">caffeine</span>
+            <span class="skill-repo">KrishnaShettyDev/dosed</span>
+          </div>
+          <span class="col-type">stimulant</span>
+        </a>
+
+        <a href="skill.html?s=opioids" class="table-row" data-type="substance">
+          <span class="col-rank">17</span>
+          <div class="col-skill">
+            <span class="skill-name">opioids</span>
+            <span class="skill-repo">KrishnaShettyDev/dosed</span>
+          </div>
+          <span class="col-type">opioid</span>
+        </a>
+
+        <a href="skill.html?s=alcohol" class="table-row" data-type="substance">
+          <span class="col-rank">18</span>
+          <div class="col-skill">
+            <span class="skill-name">alcohol</span>
+            <span class="skill-repo">KrishnaShettyDev/dosed</span>
+          </div>
+          <span class="col-type">depressant</span>
+        </a>
+
+        <a href="skill.html?s=benzodiazepines" class="table-row" data-type="substance">
+          <span class="col-rank">19</span>
+          <div class="col-skill">
+            <span class="skill-name">benzodiazepines</span>
+            <span class="skill-repo">KrishnaShettyDev/dosed</span>
+          </div>
+          <span class="col-type">depressant</span>
+        </a>
+
+        <a href="skill.html?s=salvia" class="table-row" data-type="substance">
+          <span class="col-rank">20</span>
+          <div class="col-skill">
+            <span class="skill-name">salvia</span>
+            <span class="skill-repo">KrishnaShettyDev/dosed</span>
+          </div>
+          <span class="col-type">psychedelic</span>
+        </a>
+
+        <a href="skill.html?s=2cb" class="table-row" data-type="substance">
+          <span class="col-rank">21</span>
+          <div class="col-skill">
+            <span class="skill-name">2cb</span>
+            <span class="skill-repo">KrishnaShettyDev/dosed</span>
+          </div>
+          <span class="col-type">psychedelic</span>
+        </a>
+
+        <a href="skill.html?s=ghb" class="table-row" data-type="substance">
+          <span class="col-rank">22</span>
+          <div class="col-skill">
+            <span class="skill-name">ghb</span>
+            <span class="skill-repo">KrishnaShettyDev/dosed</span>
+          </div>
+          <span class="col-type">depressant</span>
+        </a>
+
+        <a href="skill.html?s=nitrous" class="table-row" data-type="substance">
+          <span class="col-rank">23</span>
+          <div class="col-skill">
+            <span class="skill-name">nitrous</span>
+            <span class="skill-repo">KrishnaShettyDev/dosed</span>
+          </div>
+          <span class="col-type">dissociative</span>
+        </a>
+
+        <a href="skill.html?s=mescaline" class="table-row" data-type="substance">
+          <span class="col-rank">24</span>
+          <div class="col-skill">
+            <span class="skill-name">mescaline</span>
+            <span class="skill-repo">KrishnaShettyDev/dosed</span>
+          </div>
+          <span class="col-type">psychedelic</span>
+        </a>
+      </div>
+    </section>
+  </main>
 
   <div class="toast" id="toast">Copied!</div>
-
   <script src="script.js"></script>
 </body>
 </html>
